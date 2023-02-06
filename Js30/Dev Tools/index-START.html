@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dog = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('hello world');
+    // Interpolated
+    console.log('hello %s ','Sarthak');
+
+    // Styled
+    console.log('%c I am awesome ','font-size:50;background-color:red');
+    // warning!
+    console.warn('NOOOOOOOOOOOOOOOOOOOOOOOOOOO');
+    // Error :|
+    console.error('STOPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP');
+
+    // Info
+    console.info('Do you know the way?');
+    // Testing
+    console.assert(false,'Na bolne pe aati hai');
+    // clearing
+    console.clear();
+
+    // Viewing DOM Elements
+    const p = document.querySelector('p');
+    console.log(p);
+    // Grouping together
+    dog.forEach(dog =>{
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`My dog's name is ${dog.name} and my dog's age is ${dog.age} years old`);
+      console.groupEnd(`${dog.name}`)
+    });
+    // counting
+    console.count('Sarthaker');
+    // timing
+    
+  </script>
+</body>
+</html>
